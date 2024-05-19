@@ -31,6 +31,7 @@
             margin-bottom: 10px; /* Reduce distance between lines */
             color: #33ccff; /* Blue color for Meet the */
             font-family: 'Poppins', sans-serif; /* Change font to Poppins */
+            text-align: center; /* Align center by default */
         }
 
         h1 span {
@@ -140,11 +141,22 @@
             font-weight: bold;
             margin-top: 10px;
         }
+
+        /* Media query for mobile screens */
+        @media only screen and (max-width: 600px) {
+            h1 {
+                text-align: left; /* Align to start on mobile screens */
+            }
+            h1 span {
+                display: block; /* Ensure the span takes full width */
+                text-align: left; /* Align to start on mobile screens */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="pt-4" style="color:white;">Meet the</h1>
+        <h1 class="pt-4" style="color:white; opacity: .7">Meet the</h1>
         <h1><span>GooBright <sup>Ai</sup></span></h1>
         <img class="robot-image" src="https://img.pikbest.com/origin/09/23/74/05gpIkbEsT4UV.png!sw800" alt="Mini Robot Image">
         <p>This page showcases futuristic technology and innovation.</p>
