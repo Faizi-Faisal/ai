@@ -152,20 +152,12 @@
         
        .centered-copyright {
     position: fixed;
-    bottom: 10px;
+    bottom: 5px;
     font-size: 12px;
     left: 48%;
     transform: translateX(-50%);
 }
 
-/* Safari-specific CSS to hide the copyright text */
-@media not all and (min-resolution:.001dpcm) { 
-    @supports (-webkit-appearance:none) { 
-        .centered-copyright {
-            display: none !important;
-        }
-    }
-}
 
         /* Media query for mobile screens */
         @media only screen and (max-width: 600px) {
