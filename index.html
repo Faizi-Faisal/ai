@@ -156,16 +156,43 @@
 
         /* Custom button style */
         .custom-button {
-            background-color: rgba(255, 255, 255, 0.1); /* Green color */
-            color: #ffffff; /* White text */
-            padding: 10px 20px; /* Adjust padding as needed */
-            border-radius: 5px; /* Rounded corners */
-            border: none;
-            text-transform: uppercase; /* Uppercase text */
-            font-weight: bold; /* Bold text */
-            cursor: pointer; /* Cursor style */
-            transition: all 0.3s ease; /* Smooth transition */
-        }
+    background-color: rgba(255, 255, 255, 0.1); /* Green color */
+    color: #ffffff; /* White text */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Rounded corners */
+    border: none;
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Cursor style */
+    transition: all 0.3s ease; /* Smooth transition */
+    position: relative; /* Required for absolute positioning of pseudo-element */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Neon border effect */
+.custom-button::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Position the border relative to the button */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px; /* Match button's border radius */
+    border: 2px solid transparent; /* Transparent border initially */
+    box-shadow: 0 0 20px 10px rgba(0, 255, 0, 0.5); /* Neon green shadow */
+    animation: neonBorder 1.5s infinite alternate; /* Neon border animation */
+}
+
+@keyframes neonBorder {
+    0% {
+        border-color: transparent;
+        box-shadow: 0 0 20px 10px rgba(0, 255, 0, 0.5); /* Neon green shadow */
+    }
+    100% {
+        border-color: rgba(0, 255, 0, 0.5); /* Neon green border color */
+        box-shadow: 0 0 20px 10px rgba(0, 255, 0, 0); /* Transparent shadow */
+    }
+}
 
         /* Custom button hover effect */
        
