@@ -150,12 +150,19 @@
             margin-top: 10px;
         }
         
-        .centered-copyright {
+       .centered-copyright {
     position: fixed;
     bottom: 10px;
     font-size: 12px;
     left: 50%;
     transform: translateX(-50%);
+    display: block; /* Make sure it's displayed */
+}
+        /* Safari-specific CSS to hide the copyright text */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .centered-copyright {
+        display: none;
+    }
 }
 
 
@@ -206,7 +213,8 @@
               </div>
         
     </div>
-    <p class="centered-copyright">&copy;2024 GooBright. All rights reserved.</p>
+    <p class="centered-copyright" id="copyright">&copy;2024 GooBright. All rights reserved.</p>
+
 
     <!-- Blurred circle blinking effect -->
     <div class="blurred-circle circle-1"></div>
